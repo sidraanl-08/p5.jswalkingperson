@@ -33,6 +33,7 @@ if (waving) {
 
     ///calling all custom functions
     person();
+    button();
 
    
 }
@@ -55,4 +56,15 @@ function person () {
 
 function mousePressed() {
     waving = !waving;
+}
+
+function button () {
+fill(255, 255, 200); 
+stroke(0);
+rect(10, 10, 180, 60, 10); 
+fill(0);
+textSize(12);
+text("Use Arrow Keys to move", 20, 30);
+text("Click mouse to wave hand", 20, 50);
+
 }
