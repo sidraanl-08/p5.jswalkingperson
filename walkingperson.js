@@ -33,9 +33,7 @@ if (waving) {
 
     ///calling all custom functions
     person();
-    button();
-
-   
+    button(); 
 }
 
 ///custom function for stick figure
@@ -50,7 +48,6 @@ function person () {
     ///legs
     line(pX, pY, pX-15, pY+30);
     line(pX, pY, pX+15, pY+30);
-
 }
 
 
