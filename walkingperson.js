@@ -1,0 +1,58 @@
+///variables for person's position
+let pX = 200;
+let pY = 300;
+
+///variables for hand movement
+let waving = false;
+
+
+function setup() {
+    createCanvas(400, 400);
+}
+
+function draw() {
+    background("skyblue");
+
+ ///adding movement with keyPressed function
+if(keyIsDown(UP_ARROW)) pY -= 10;
+if(keyIsDown(DOWN_ARROW)) pY += 10;
+if(keyIsDown(RIGHT_ARROW)) pX += 10;
+if(keyIsDown(LEFT_ARROW)) pX -= 10;
+
+//using constrain to prevent figure going outside canvas
+pX = constrain(pX, 20, width - 20);
+pY = constrain(pY, 60, height - 30);
+
+//arm movement
+if (waving) {
+  line(pX - 20, pY - 40, pX + 20, pY - 60); // hand up
+} else {
+  line(pX - 20, pY - 40, pX + 20, pY - 40); // normal arm
+}
+
+
+    ///calling all custom functions
+    person();
+
+   
+}
+
+///custom function for stick figure
+
+function person () {
+    //head
+    ellipse(pX, pY - 60, 20);
+
+    //body
+    line(pX, pY - 50, pX, pY);
+
+    ///legs
+    line(pX, pY, pX-15, pY+30);
+    line(pX, pY, pX+15, pY+30);
+
+}
+
+
+function mousePressed() {
+    waving = !waving;
+}
