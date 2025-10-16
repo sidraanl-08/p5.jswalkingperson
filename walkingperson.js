@@ -64,5 +64,4 @@ fill(0);
 textSize(12);
 text("Use Arrow Keys to move", 20, 30);
 text("Click mouse to wave hand", 20, 50);
-
 }
