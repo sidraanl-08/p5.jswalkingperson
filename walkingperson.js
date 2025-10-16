@@ -40,6 +40,7 @@ if (waving) {
 
 function person () {
     //head
+    fill("white");
     ellipse(pX, pY - 60, 20);
 
     //body
